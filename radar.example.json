@@ -1,0 +1,30 @@
+{
+  "providers": [
+    {
+      "name": "nous",
+      "dialect": "nous",
+      "base_url": "https://inference-api.nousresearch.com/v1",
+      "auth": { "kind": "hermes_auth", "provider": "nous" }
+    },
+    {
+      "name": "merge",
+      "dialect": "merge",
+      "base_url": "https://api-gateway.merge.dev/v1",
+      "auth": { "kind": "env", "var": "MERGE_API_KEY" }
+    }
+  ],
+
+  "focus": ["deepseek"],
+
+  "exclude_prefixes": ["anthropic/", "openai/", "google/"],
+
+  "new_model_ceiling": { "input": 0.15, "output": 0.60 },
+
+  "top_cheap": 8,
+  "max_new": 8,
+
+  "current_model": "",
+
+  "state_file": ".radar_seen.json",
+  "env_file": ""
+}

@@ -1,0 +1,13 @@
+# your real config — never commit this
+radar.json
+
+# the baseline of models already seen
+.radar_seen.json
+.radar_seen.json.*
+
+# python
+__pycache__/
+*.py[cod]
+.venv/
+venv/
+env/
