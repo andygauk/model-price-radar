@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<style>
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  html, body { width: 1280px; height: 640px; overflow: hidden; }
+  body {
+    background: #16171a;
+    font-family: "Segoe UI", -apple-system, Helvetica, Arial, sans-serif;
+    color: #ffffff;
+    display: flex;
+    align-items: center;
+    padding: 0 84px;
+    position: relative;
+  }
+  /* radar rings, off-centre and cropped */
+  .rings { position: absolute; right: -140px; top: 50%; transform: translateY(-50%);
+           width: 620px; height: 620px; }
+  .rings div {
+    position: absolute; inset: 0; border-radius: 50%;
+    border: 2px solid rgba(255,82,0,0.16);
+  }
+  .rings div:nth-child(2) { inset: 70px; border-color: rgba(255,82,0,0.24); }
+  .rings div:nth-child(3) { inset: 140px; border-color: rgba(255,82,0,0.34); }
+  .rings div:nth-child(4) { inset: 210px; border-color: rgba(255,82,0,0.5); }
+  .sweep {
+    position: absolute; right: 60px; top: 50%; width: 300px; height: 2px;
+    background: linear-gradient(90deg, rgba(255,82,0,0), #FF5200);
+    transform-origin: right center; transform: translateY(-50%) rotate(-28deg);
+    box-shadow: 0 0 18px rgba(255,82,0,0.7);
+  }
+  .content { position: relative; z-index: 2; max-width: 760px; }
+  .kicker { color: #FF5200; font-size: 21px; font-weight: 600; letter-spacing: 0.16em;
+            text-transform: uppercase; margin-bottom: 22px; }
+  h1 { font-size: 62px; line-height: 1.06; font-weight: 700; letter-spacing: -0.02em; }
+  h1 em { color: #FF5200; font-style: normal; }
+  .sub { margin-top: 26px; font-size: 25px; color: #9aa0a6; line-height: 1.45; }
+  .rule { margin-top: 34px; width: 108px; height: 5px; background: #FF5200; border-radius: 3px; }
+</style>
+</head>
+<body>
+  <div class="rings"><div></div><div></div><div></div><div></div></div>
+  <div class="sweep"></div>
+  <div class="content">
+    <div class="kicker">model-price-radar</div>
+    <h1>Am I on the <em>cheapest</em> route for the model I actually use?</h1>
+    <div class="sub">Live LLM prices across providers — cheapest first, new models flagged.<br>Standard library only. No keys of its own.</div>
+    <div class="rule"></div>
+  </div>
+</body>
+</html>
